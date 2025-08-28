@@ -130,9 +130,13 @@ const ProjectsSection = () => {
     {
       id: 3,
       title: "3D Portfolio Website",
-      imageSrc: "/images/project-3.png",
-      // same as current website -> will reload
       link: window.location.origin,
+    },
+    {
+      id: 2,
+      title: "3D Game Website",
+      imageSrc: "/images/project-4.png",
+      link: "https://ai-resume-analyzer-ruddy-nine.vercel.app/",
     },
   ]
 
