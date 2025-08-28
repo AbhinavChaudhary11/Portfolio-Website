@@ -133,8 +133,8 @@ const ProjectsSection = () => {
       link: window.location.origin,
     },
     {
-      id: 2,
-      title: "3D Game Website",
+      id: 4,
+      title: "ResuMate",
       imageSrc: "/images/project-4.png",
       link: "https://ai-resume-analyzer-ruddy-nine.vercel.app/",
     },
