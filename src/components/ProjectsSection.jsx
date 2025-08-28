@@ -130,6 +130,7 @@ const ProjectsSection = () => {
     {
       id: 3,
       title: "3D Portfolio Website",
+      imageSrc: "/images/project-3.png",
       link: window.location.origin,
     },
     {
