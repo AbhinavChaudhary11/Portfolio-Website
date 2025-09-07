@@ -115,7 +115,7 @@ const ContactSection = ({ openContactForm }) => {
                 className='text-center relative flex flex-col items-center justify-center opacity-0'
                 ref={finaltextRef}
             >
-                <h1 className='text-black md:w-[10rem] w-[20rem] lg:scale-[0.4] sm:scale-[0.25] scale-[0.7] md:font-bold text-sm sm:text-base leading-none mb-5'>
+                <h1 className='text-black md:w-[8rem] w-[20rem] lg:scale-[0.4] sm:scale-[0.25] scale-[0.7] md:font-bold text-sm sm:text-base leading-none mb-5'>
                     Let's do something great together.
                 </h1>
 
