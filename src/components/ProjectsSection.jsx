@@ -139,6 +139,12 @@ const ProjectsSection = () => {
       imageSrc: "/images/project-4.png",
       link: "https://ai-resume-analyzer-ruddy-nine.vercel.app/",
     },
+    {
+      id: 5,
+      title: "Store Rating System",
+      imageSrc: "/images/project-5.png",
+      link: "",
+    },
   ]
 
   // GSAP Animations
