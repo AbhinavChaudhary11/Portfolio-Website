@@ -23,7 +23,7 @@ const Header = ({ contactFormOpen, openContactForm, closeContactForm }) => {
             </motion.div>
             
             <nav className='lg:flex hidden space-x-8'>
-                {['Home', 'About', 'Projects', 'Experience','Contact'].map((item, index) => (
+                {['Home', 'About', 'Projects','Contact'].map((item, index) => (
                     <motion.a initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ type:'spring', stiffness:100, damping: 25, delay: 0.7 + index* 0.2}}
                         href='#' key={index} className='relative text-gray-800 dark:text-gray-200 hover:violet-600 dark:hover:text-violet-400 font-medium transition-colors duration-300 group'>
                         {item}
