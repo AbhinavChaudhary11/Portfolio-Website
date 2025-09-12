@@ -18,15 +18,15 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-violet-900 to-black flex flex-col-reverse xl:flex-row items-center justify-between px-6 md:px-12 lg:px-24 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-b from-violet-900 to-black flex flex-col-reverse xl:flex-row items-center justify-between px-6 md:px-12 lg:px-24">
       
       {/* Left Section (Text) */}
-      <div className="z-50 text-center xl:text-left max-w-xl relative">
+      <div className="relative text-center xl:text-left max-w-xl">
         <motion.h1
           initial={{ opacity: 0, y: 80 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 40, damping: 25, delay: 1.3, duration: 1.5 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold z-10 mb-6 leading-tight"
+          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
         >
           Turning Ideas into Reality
         </motion.h1>
@@ -49,7 +49,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 40, damping: 25, delay: 2.3, duration: 1.5 }}
           onClick={handleDownload}
-          className="relative z-50 mt-6 px-6 py-3 bg-violet-600 text-white font-semibold rounded-lg shadow-lg hover:bg-violet-500 transition-colors duration-300"
+          className="relative mt-6 px-6 py-3 bg-violet-600 text-white font-semibold rounded-lg shadow-lg hover:bg-violet-500 transition-colors duration-300"
         >
           Download Resume
         </motion.button>
