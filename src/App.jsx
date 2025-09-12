@@ -7,6 +7,7 @@ import CustomCursor from './components/CustomCursor'
 import About from './components/About'
 import ProjectsSection from './components/ProjectsSection'
 import ContactSection from './components/ContactSection'
+import ContactForm from './components/ContactForm' // import modal component
 
 const App = () => {
   const [contactFormOpen, setContactFormOpen] = useState(false)
@@ -15,7 +16,7 @@ const App = () => {
   const closeContactForm = () => setContactFormOpen(false)
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger)
 
     ScrollTrigger.refresh()
 
@@ -27,15 +28,21 @@ const App = () => {
   return (
     <>
       <Header 
-        contactFormOpen={contactFormOpen}
-        openContactForm={openContactForm}
-        closeContactForm={closeContactForm}
+        openContactForm={openContactForm}  // pass function as prop
       />
       <HeroSection/>
       <CustomCursor/>
       <About/>
       <ProjectsSection/>
-      <ContactSection openContactForm={openContactForm}/>
+      <ContactSection 
+        openContactForm={openContactForm} // pass function as prop
+      />
+      
+      {/* Contact Form modal */}
+      <ContactForm 
+        isOpen={contactFormOpen} 
+        onClose={closeContactForm} 
+      />
     </>
   )
 }
