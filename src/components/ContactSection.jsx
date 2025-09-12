@@ -115,9 +115,9 @@ const ContactSection = ({ openContactForm }) => {
                 className='text-center relative flex flex-col items-center justify-center opacity-0'
                 ref={finaltextRef}
             >
-                <h1 className='text-black md:w-[8rem] w-[20rem] lg:scale-[0.4] sm:scale-[0.25] scale-[0.7] md:font-bold text-sm sm:text-base leading-none mb-5'>
+                <p className='text-black lg:text-4xl md:text-3xl sm:text-2xl text-xl font-bold lg:w-[60rem] w-[40rem] absolute sm:mt-3 mt-1 mb-10 md:scale-[0.1] scale-[0.068]'>
                     Let's do something great together.
-                </h1>
+                </p>
 
                 <p className='text-black lg:w-[40rem] w-[20rem] absolute sm:mt-3 mt-1 md:scale-[0.1] scale-[0.068]'>
                     Feel free to reach out for collaborations or just a friendly hello. 
