@@ -188,13 +188,14 @@ const ProjectsSection = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-[#f6f6f6] py-20">
+    <section ref={sectionRef} className="bg-gradient-to-t from-black to-[#9a74cf50] py-20">
+      
       <div className="container mx-auto px-4">
         {/* Section Heading */}
         <div className="text-center mb-16">
           <h2
             ref={titleRef}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 opacity-0"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 opacity-0"
           >
             Feature Projects
           </h2>
@@ -218,7 +219,7 @@ const ProjectsSection = () => {
                 <BentoCard src={project.imageSrc} link={project.link} />
               </BentoTilt>
               {/* Title outside card */}
-              <h2 className="text-2xl md:text-3xl font-bold text-black text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-purple-200 text-center">
                 {project.title}
               </h2>
             </div>

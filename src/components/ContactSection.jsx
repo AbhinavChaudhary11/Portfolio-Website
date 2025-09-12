@@ -96,7 +96,7 @@ const ContactSection = ({ openContactForm }) => {
   return (
     <section 
         ref={sectionRef}
-        className='flex items-center justify-center bg-black relative '
+        className='flex items-center justify-center bg-gradient-to-b from-black to-[#9a74cf50] relative '
     style={{overscrollBehavior:"none"}}>
         {/* simple circle */}
         <div

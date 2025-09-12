@@ -18,7 +18,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-violet-800 to-black flex flex-col-reverse xl:flex-row items-center justify-between px-6 md:px-12 lg:px-24 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-b from-violet-900 to-black flex flex-col-reverse xl:flex-row items-center justify-between px-6 md:px-12 lg:px-24 overflow-hidden">
       
       {/* Left Section (Text) */}
       <div className="z-50 text-center xl:text-left max-w-xl relative">
