@@ -2,7 +2,7 @@ import {useRef , useEffect} from 'react'
 import {gsap} from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-const ContactSection = ({ openContactForm }) => {
+const ContactSection = ({ openContactForm , id}) => {
     const circleRef = useRef(null)
     const sectionRef = useRef(null)
     const initialTextRef = useRef(null)
@@ -95,9 +95,10 @@ const ContactSection = ({ openContactForm }) => {
 
   return (
     <section 
+        id={id}
         ref={sectionRef}
         className='flex items-center justify-center bg-gradient-to-b from-black to-[#9a74cf50] relative '
-    style={{overscrollBehavior:"none"}}>
+        style={{overscrollBehavior:"none"}}>
         {/* simple circle */}
         <div
             ref={circleRef}

@@ -28,17 +28,14 @@ const App = () => {
   return (
     <>
       <Header 
-        openContactForm={openContactForm}  // pass function as prop
+        openContactForm={openContactForm}  
       />
-      <HeroSection/>
+      <HeroSection id="home" />
       <CustomCursor/>
-      <About/>
-      <ProjectsSection/>
-      <ContactSection 
-        openContactForm={openContactForm} // pass function as prop
-      />
-      
-      {/* Contact Form modal */}
+      <About id="about" />
+      <ProjectsSection id="projects" />
+      <ContactSection id="contact" openContactForm={openContactForm} />
+
       <ContactForm 
         isOpen={contactFormOpen} 
         onClose={closeContactForm} 

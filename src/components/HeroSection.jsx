@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Spline from "@splinetool/react-spline";
 
-const HeroSection = () => {
+const HeroSection = ({id}) => {
   const handleDownload = () => {
     fetch("/resume.pdf").then((res) => {
       res.blob().then((blob) => {
@@ -18,7 +18,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-b from-violet-900 to-black flex flex-col-reverse xl:flex-row items-center justify-between px-6 md:px-12 lg:px-24">
+    <section id={id} className="relative min-h-screen bg-gradient-to-b from-violet-900 to-black flex flex-col-reverse xl:flex-row items-center justify-between px-6 md:px-12 lg:px-24">
       
       {/* Left Section (Text) */}
       <div className="relative text-center xl:text-left max-w-xl">

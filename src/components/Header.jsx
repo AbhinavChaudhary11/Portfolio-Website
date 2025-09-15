@@ -48,19 +48,22 @@ const Header = ({ openContactForm, toggleMenuCallback }) => {
         </motion.div>
 
         <nav className="lg:flex hidden space-x-8">
-          {["Home", "About", "Projects", "Contact"].map((item, index) => (
-            <motion.a
-              key={index}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ type: "spring", stiffness: 100, damping: 25, delay: 0.7 + index * 0.2 }}
-              href="#"
-              className="relative text-gray-800 dark:text-gray-200 hover:text-violet-600 dark:hover:text-violet-400 font-medium transition-colors duration-300 group"
-            >
-              {item}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-violet-600 group-hover:w-full transition-all duration-300"></span>
-            </motion.a>
-          ))}
+          {["Home", "About", "Projects", "Contact"].map((item, index) => {
+            const link = item.toLowerCase(); // "home", "about", etc.
+            return (
+              <motion.a
+                key={index}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ type: "spring", stiffness: 100, damping: 25, delay: 0.7 + index * 0.2 }}
+                href={`#${link}`}
+                className="relative text-gray-800 dark:text-gray-200 hover:text-violet-600 dark:hover:text-violet-400 font-medium transition-colors duration-300 group"
+              >
+                {item}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-violet-600 group-hover:w-full transition-all duration-300"></span>
+              </motion.a>
+            );
+          })}
         </nav>
 
         <div className="md:flex hidden items-center space-x-4">

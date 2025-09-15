@@ -96,7 +96,7 @@ export const BentoCard = ({ src, link }) => {
   )
 }
 
-const ProjectsSection = () => {
+const ProjectsSection = ({id}) => {
   const sectionRef = useRef(null)
   const titleRef = useRef(null)
   const titleLineRef = useRef(null)
@@ -188,7 +188,7 @@ const ProjectsSection = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-gradient-to-t from-black to-[#9a74cf50] py-20">
+    <section id={id} ref={sectionRef} className="bg-gradient-to-t from-black to-[#9a74cf50] py-20">
       
       <div className="container mx-auto px-4">
         {/* Section Heading */}

@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Slider from './Slider'; // 👈 import your slider
 
-const About = () => {
+const About = ({id}) => {
     const sectionRef = useRef(null);
     const titleRef = useRef(null);
     const introRef = useRef(null);
@@ -79,7 +79,7 @@ const About = () => {
     };
     
     return (
-        <section ref={sectionRef} className="h-screen relative overflow-hidden bg-gradient-to-b from-black to-[#9a74cf50] ">
+        <section id={id} ref={sectionRef} className="h-screen relative overflow-hidden bg-gradient-to-b from-black to-[#9a74cf50] ">
             <div className='absolute inset-0 overflow-hidden'>
                 {/* stars */}
                 {[...Array(10)].map((_, i) => (
