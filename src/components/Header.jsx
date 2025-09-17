@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin, FiMenu, FiX } from "react-icons/fi";
-import { useState,useEffect} from "react";
+import { useState, useEffect } from "react";
 
 const Header = ({ openContactForm, toggleMenuCallback }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +49,7 @@ const Header = ({ openContactForm, toggleMenuCallback }) => {
 
         <nav className="lg:flex hidden space-x-8">
           {["Home", "About", "Projects", "Contact"].map((item, index) => {
-            const link = item.toLowerCase(); // "home", "about", etc.
+            const link = item.toLowerCase();
             return (
               <motion.a
                 key={index}
@@ -92,7 +92,7 @@ const Header = ({ openContactForm, toggleMenuCallback }) => {
           </motion.a>
 
           <motion.button
-            onClick={openContactForm} // now comes from props
+            onClick={openContactForm}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.6, duration: 0.8, type: "spring", stiffness: 100, damping: 15 }}
@@ -109,6 +109,7 @@ const Header = ({ openContactForm, toggleMenuCallback }) => {
         </div>
       </div>
 
+      {/* ✅ Mobile Nav fixed */}
       <motion.div
         initial={{ opacity: 0, height: 0 }}
         animate={{ opacity: isOpen ? 1 : 0, height: isOpen ? "auto" : 0 }}
@@ -116,11 +117,19 @@ const Header = ({ openContactForm, toggleMenuCallback }) => {
         className="md:hidden overflow-hidden bg-white dark:bg-gray-900 shadow-lg px-4 py-5 space-y-5"
       >
         <nav className="flex flex-col space-y-3">
-          {["Home", "About", "Projects", "Contact"].map((item) => (
-            <a onClick={toggleMenu} className="text-gray-300 font-medium py-2" key={item} href="#">
-              {item}
-            </a>
-          ))}
+          {["Home", "About", "Projects", "Contact"].map((item) => {
+            const link = item.toLowerCase();
+            return (
+              <a
+                key={item}
+                href={`#${link}`}
+                onClick={toggleMenu}
+                className="text-gray-800 dark:text-gray-200 font-medium py-2 hover:text-violet-600 dark:hover:text-violet-400 transition-colors"
+              >
+                {item}
+              </a>
+            );
+          })}
         </nav>
       </motion.div>
     </header>
