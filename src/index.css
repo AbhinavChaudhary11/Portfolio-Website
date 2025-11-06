@@ -132,14 +132,14 @@ section {
     animation: autoRun 10s linear infinite;
     transition: filter 0.5s;
     animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1) - 10s) !important;
-    border-radius: 0.5rem; /* optional rounded edges */
-    overflow: hidden; /* ensures images don’t spill out */
+    border-radius: 0.5rem; 
+    overflow: hidden; 
 }
 
 .slider .list .item img {
     width: 100%;
     height: 100%;
-    object-fit: contain;   /* 👈 this makes every image fill perfectly */
+    object-fit: contain; 
     object-position: center;
     display: block;
     background: #e9d5ff; /* 👈 rectangle background is now white */
@@ -175,4 +175,71 @@ section {
     to {
         left: 100%;
     }
+}
+
+svg path{
+  fill:transparent;
+  stroke: white;
+  stroke-width: 2;
+  stroke-dasharray: 2649;
+  stroke-dashoffset: 2649;
+  animation: text-animation 4s ease-in-out 1 forwards;
+}
+
+@keyframes text-animation {
+  0% {
+    stroke-dashoffset: 2649;
+  }
+  80%{
+    fill:transparent;
+  }
+  100% {
+    fill: white;
+    stroke-dashoffset: 0;
+  }
+}
+#title{
+  overflow: visible;
+position: relative;
+left: 20px;
+}
+
+.banner{
+  width: 100%;
+  height:100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .slider{
+  position: absolute;
+  width:200px;
+  height:250px;
+  top: 10%;
+  left:calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autorun 20s linear infinite;
+}
+@keyframes autorun{
+  from{
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  to{
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+.banner .slider .item{
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: 
+    rotateY(calc((var(--position) - 1) * calc(360deg / var(--quantity))*1deg))
+    translateZ(550px);
+}
+
+.banner .slider .item img{
+  width: 100%;
+  height:100%;
+  object-fit: cover;
 }
