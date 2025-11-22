@@ -133,6 +133,12 @@ const ProjectsSection = ({id}) => {
       imageSrc: "/images/project-5.png",
       link: "",
     },
+    {
+      id: 6,
+      title: "BookVerse",
+      imageSrc: "/images/project-6.png",
+      link: "",
+    },
   ]
 
   useEffect(() => {
